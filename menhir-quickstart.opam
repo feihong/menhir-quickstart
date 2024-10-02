@@ -1,0 +1,16 @@
+opam-version: "2.0"
+synopsis: "Menhir Quickstart"
+license: "MIT"
+maintainer: ["Feihong Hsu"]
+authors: ["Feihong Hsu"]
+homepage: "https://github.com/feihong/menhir-quickstart"
+bug-reports: "https://github.com/feihong/menhir-quickstart"
+depends: [
+  "ocaml" {>= "5.2.0"}
+  "dune" {>= "3.8"}
+  "menhir" {>= "20240715"}
+  "sedlex" {>= "3.2"}
+  "ocaml-lsp-server" {with-dev-setup}
+  "dot-merlin-reader" {with-dev-setup}
+]
+dev-repo: "git+https://github.com/feihong/menhir-quickstart.git"
