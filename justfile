@@ -21,3 +21,5 @@ test:
 hello:
   dune exec hello/hello.exe
 
+simpl:
+  dune exec simpl/main.exe
