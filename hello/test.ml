@@ -1,7 +1,8 @@
+let (-:) name f = Alcotest.test_case name `Quick f
+
 let test_case n expected =
   let name = Printf.sprintf "%d random hanzi" n in
-  let test_fn () = Alcotest.(check string) "same string" expected (Hanzi.random n) in
-  Alcotest.test_case name `Quick test_fn
+  name -: fun () -> Hanzi.random n |> Alcotest.(check string) "same string" expected
 
 let () =
   Random.init 88;
