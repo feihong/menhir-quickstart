@@ -1,2 +1,13 @@
 (executable
- (name hello))
+ (name hello)
+ (modules hello hanzi))
+
+(executable
+ (name test)
+ (modules test hanzi)
+ (libraries alcotest))
+
+(rule
+ (alias runtest)
+ (action
+  (run %{exe:test.exe})))

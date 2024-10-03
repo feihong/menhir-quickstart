@@ -12,5 +12,12 @@ install:
 build:
   dune build
 
+watch:
+  dune build --watch
+
+test:
+  dune build @runtest
+
 hello:
   dune exec hello/hello.exe
+

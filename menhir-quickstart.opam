@@ -10,7 +10,8 @@ depends: [
   "dune" {>= "3.8"}
   "menhir" {>= "20240715"}
   "sedlex" {>= "3.2"}
-  "ocaml-lsp-server" {with-dev-setup}
-  "dot-merlin-reader" {with-dev-setup}
+  "ocaml-lsp-server" {dev}
+  "ocamlformat" {dev}
+  "alcotest" {with-test}
 ]
 dev-repo: "git+https://github.com/feihong/menhir-quickstart.git"
