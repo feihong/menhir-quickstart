@@ -24,8 +24,5 @@ format:
 hello:
   dune exec hello/hello.exe
 
-calc:
-  dune exec calculator/test.exe
-
 simpl:
   dune exec simpl/main.exe

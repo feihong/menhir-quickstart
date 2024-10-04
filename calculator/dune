@@ -1,0 +1,13 @@
+(executable
+ (name test)
+ (libraries str alcotest))
+
+(menhir
+ (modules parser))
+
+(ocamllex lexer)
+
+(rule
+ (alias runtest)
+ (action
+  (run %{exe:test.exe})))
