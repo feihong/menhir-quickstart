@@ -1,5 +1,3 @@
-
-
 let () =
   Random.self_init ();
   print_endline "你好世界！";

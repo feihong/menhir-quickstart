@@ -18,8 +18,14 @@ watch:
 test:
   dune build @runtest
 
+format:
+  dune build @fmt --auto-promote
+
 hello:
   dune exec hello/hello.exe
+
+calc:
+  dune exec calculator/test.exe
 
 simpl:
   dune exec simpl/main.exe

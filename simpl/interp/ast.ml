@@ -1,7 +1,4 @@
-type bop =
-  | Add
-  | Mult
-  | Leq
+type bop = Add | Mult | Leq
 
 type expr =
   | Var of string
