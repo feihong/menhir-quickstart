@@ -1,13 +1,10 @@
 (executable
  (name test)
- (libraries alcotest menhirLib sedlex str)
- (preprocess
-  (pps sedlex.ppx)))
+ (libraries alcotest calc))
 
-(menhir
- (modules parser))
-
-(ocamllex ocamlLexer)
+(executable
+ (name main)
+ (libraries calc))
 
 (rule
  (alias runtest)
