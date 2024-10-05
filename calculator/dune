@@ -8,5 +8,7 @@
 
 (rule
  (alias runtest)
+ (deps
+  (file tests.t))
  (action
   (run %{exe:test.exe})))

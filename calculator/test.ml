@@ -12,7 +12,8 @@ module Test = struct
                | [] -> []
                | expected :: input ->
                    let input = input |> List.rev |> String.concat "\n" in
-                   [ (input -: fun () -> Calc.interp lexer input |> Alcotest.(check string) "same string" expected) ])
+                   let name = Str.(global_replace (regexp "\n") " " input) in
+                   [ (name -: fun () -> Calc.interp lexer input |> Alcotest.(check string) "same string" expected) ])
       | "" :: tail ->
           let new_all = match acc.current with [] -> acc.all | current -> current :: acc.all in
           aux { current = []; all = new_all } tail
