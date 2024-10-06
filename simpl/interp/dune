@@ -1,7 +1,10 @@
 (library
- (name interp))
+ (name interp)
+ (libraries menhirLib sedlex)
+ (preprocess
+  (pps sedlex.ppx)))
 
 (menhir
  (modules parser))
 
-(ocamllex lexer)
+(ocamllex olexer)

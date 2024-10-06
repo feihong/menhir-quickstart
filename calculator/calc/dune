@@ -1,6 +1,5 @@
 (library
  (name calc)
- (modules ast calc lexer ocamlLexer parser)
  (libraries menhirLib sedlex str)
  (preprocess
   (pps sedlex.ppx)))
